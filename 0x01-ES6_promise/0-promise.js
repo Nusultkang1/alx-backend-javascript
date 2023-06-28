@@ -3,6 +3,6 @@ function getResponseFromAPI() {
 		getLoad(() => {
 			const response = "Load";
 			resolve(response);
-		}, 500);
+		}, 2000);
 	});
 }
