@@ -1,4 +1,4 @@
-class HolbertonClass {
+export class HolbertonClass {
   constructor(year, location) {
     this._year = year;
     this._location = location;
@@ -12,8 +12,6 @@ class HolbertonClass {
     return this._location;
   }
 }
-
-export default HolbertonClass;
 
 export class StudentHolberton {
   constructor(firstName, lastName, holbertonClass) {
@@ -44,4 +42,5 @@ const student3 = new StudentHolberton('Albert', 'Clinton', class2019);
 const student4 = new StudentHolberton('Donald', 'Bush', class2019);
 const student5 = new StudentHolberton('Jason', 'Sandler', class2019);
 
-export default [student1, student2, student3, student4, student5];
+export const listOfStudents = [student1, student2, student3, student4, student5];
+
