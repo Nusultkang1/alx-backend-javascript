@@ -1,17 +1,13 @@
 const express = require('express');
-const AppController = require('./AppController');
-const StudentsController = require('./StudentsController');
+const AppController = require('../controllers/AppController');
+const StudentsController = require('../controllers/StudentsController');
 
-const app = express();
+const router = express.Router();
 
-// Routes linked to AppController
-app.get('/', AppController.getHomepage);
+router.get('/', AppController.getHomepage);
 
-// Routes linked to StudentsController
-app.get('/students', StudentsController.getAllStudents);
-app.get('/students/:major', StudentsController.getAllStudentsByMajor);
+router.get('/students', StudentsController.getAllStudents);
 
-app.listen(1245, () => {
-  console.log('Server is running and listening on port 1245');
-});
+router.get('/students/:major', StudentsController.getAllStudentsByMajor);
 
+module.exports = router;

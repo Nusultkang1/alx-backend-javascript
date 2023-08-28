@@ -1,16 +1,13 @@
 const express = require('express');
 
 const app = express();
+const port = 1245;
 
-// Define a route for the root path
-app.get('/', (req, res) => {
-  res.send('Hello Holberton School!\n');
+app.get('/', (request, response) => {
+  response.send('Hello Holberton School!');
 });
 
-// Start the server on port 1245
-app.listen(1245, () => {
-  console.log('Server is running and listening on port 1245');
+app.listen(port, () => {
 });
 
 module.exports = app;
-
